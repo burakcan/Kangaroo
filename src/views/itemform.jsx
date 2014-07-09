@@ -102,13 +102,13 @@
 
       Dispatcher.dispatch('items:save', data);
       Dispatcher.dispatch('actions:close', {
-        type : 'newCategory'
+        type : 'newItem'
       });
     },
     cancel : function(e){
       e.preventDefault();
       Dispatcher.dispatch('actions:close', {
-        type : 'newCategory'
+        type : 'newItem'
       });
     }
   });

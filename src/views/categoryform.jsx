@@ -60,11 +60,15 @@
         catName : catName,
         cid     : cid
       });
-      Dispatcher.dispatch('actions:close', 'newCategory');
+      Dispatcher.dispatch('actions:close', {
+        type : 'newCategory'
+      });
     },
     cancel : function(e){
       e.preventDefault();
-      Dispatcher.dispatch('actions:close', 'newCategory');
+      Dispatcher.dispatch('actions:close', {
+        type : 'newCategory'
+      });
     }
   });
 

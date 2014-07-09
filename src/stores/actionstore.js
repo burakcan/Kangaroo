@@ -24,8 +24,6 @@
     var index = this.actions.indexOf(action);
     this.actions.splice(index, 1);
 
-    console.log(action)
-
     if (this.lockeds.indexOf(action.type) > -1) {
       this.lockeds.splice(this.lockeds.indexOf(action.type), 1);
     }
