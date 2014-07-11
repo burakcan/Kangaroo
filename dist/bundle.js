@@ -397,7 +397,7 @@ for(var C in y)y[C].dependencies=[C];var E={eventTypes:g,executeDispatch:functio
       ActionStore.on('action', refreshState);
 
       if (this.props.firstLaunch != 'no') {
-        // localStorage._appFirstLaunch = 'no';
+        localStorage._appFirstLaunch = 'no';
         Dispatcher.dispatch('actions:open',{
           type : 'firstLaunch'
         });

@@ -48,7 +48,7 @@
       ActionStore.on('action', refreshState);
 
       if (this.props.firstLaunch != 'no') {
-        // localStorage._appFirstLaunch = 'no';
+        localStorage._appFirstLaunch = 'no';
         Dispatcher.dispatch('actions:open',{
           type : 'firstLaunch'
         });
