@@ -1,0 +1,47 @@
+main > header {
+	width: calc(100% - 260px);
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 260px;
+	border-bottom: 1px solid #E3E3E3;
+}
+
+main > header label.icon-search {
+	pointer-events: none;
+	position: absolute;
+	top: 23px;
+	right: 275px;
+	color: #E3E3E3;
+}
+
+main > header .search-input {
+	float: right;
+	height: 40px;
+	width: 25%;
+	border: 1px solid #E3E3E3;
+	margin: 10px;
+	outline: none;
+	padding: 0 10px 0 30px;
+}
+
+main > header .search-input:focus {
+	border-color: #B2B6C0;
+}
+
+main > header button.add {
+	float: left;
+	display: block;
+	padding: 0 15px;
+	background: transparent;
+	border: 1px solid #646871;
+	outline: none;
+	height: 40px;
+	margin: 10px;
+	color: #646871;
+	font-weight: 400;
+}
+
+main > header button.add:hover {
+	background: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,103 @@
+main > aside {
+	width: 259px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #2A2D34;
+	border-right: 1px solid #050508;
+}
+
+main > aside h3 {
+	display: block;
+	padding: 0 0 0 20px;
+	margin: 0;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-weight: 300;
+	font-size: 18px;
+	opacity: 0.99;
+	border-bottom: 1px solid #1D2028;
+	background: #25272E;
+	box-shadow: 0 1px 0 #31343D;
+}
+
+main > aside nav ul {
+	margin: 0;
+	padding: 10px;
+	display: block;
+}
+
+main > aside nav ul li {
+	position: relative;
+}
+
+main > aside nav ul li.active {
+	background: #25272E;
+}
+
+main aside nav a {
+	color: #646871;
+	text-decoration: none;
+	opacity: 0.99;
+	display: block;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+main aside nav a:hover {
+	color: #ccc;
+}
+
+main aside nav a span {
+	display: block;
+	width: 100%;
+	padding: 0 36px 0 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+main > aside nav ul li.active a {
+	color: #fff;
+}
+
+main > aside nav ul li button {
+	background: transparent;
+	display: block;
+	border: none;
+	outline: none;
+	padding: 2px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	z-index: 5;
+	color: #646871;
+}
+
+main > aside nav ul li button.edit {
+	right: 24px;
+}
+
+main > aside nav ul li button:hover {
+	color: #fff;
+}
+
+main > aside nav button.new-category {
+	display: block;
+	background: transparent;
+	border: 1px solid #646871;
+	outline: none;
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	color: #646871;
+	font-weight: 400;
+}
+main > aside nav button.new-category:hover {
+	background: rgba(255, 255, 255, 0.1);
+};
