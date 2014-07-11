@@ -3,6 +3,7 @@
 
   var ItemView        = require('./item.jsx');
   var CategoryStore   = require('../stores/categorystore.js');
+  var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
   ContentAreaView = React.createClass({
     statics : {
@@ -28,13 +29,18 @@
             errMsg = ContentAreaView.noItemFoundMsg;
             break;
         }
-        views.push(<div key='errmsg'>{errMsg}</div>)
+        views.push(<div key='errmsg' className='errmsg'>{errMsg}</div>)
       }
 
       return (
-        <div className="content-area">
+        <ReactCSSTransitionGroup
+          component={React.DOM.div}
+          className="content-area"
+          transitionName='item'>
+
           {views}
-        </div>
+
+        </ReactCSSTransitionGroup>
       )
     }
   });

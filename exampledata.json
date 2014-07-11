@@ -1,0 +1,74 @@
+{
+	"categories" : [
+		{
+			"catName" : "Interesting Links",
+			"persist" : false
+			},
+		{
+			"catName" : "Back-end Development" ,
+			"persist" : false
+			},
+		{
+			"catName" : "Front-end Development",
+			"persist" : false
+			 }
+	],
+	"items" 		 : [
+		{
+			"title"  			: "React",
+			"catId"  			: "1",
+			"persist"     : false,
+			"description" : "A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES",
+      "url"         : "http://facebook.github.io/react/index.html"
+			},
+		{
+			"title"  			: "Backbone.js",
+			"catId"  			: "1",
+			"persist"     : false,
+			"description" : "Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.",
+      "url"         : "http://backbonejs.org"
+			},
+		{
+			"title"  			: "lunr.js",
+			"catId"  			: "1",
+			"persist"     : false,
+			"description" : "Simple full-text search in your browser",
+      "url"         : "http://lunrjs.com"
+			},
+		{
+			"title"  			: "Python",
+			"catId"  			: "2",
+			"persist"     : false,
+			"description" : "Python is powerful... and fast; plays well with others; runs everywhere; is friendly & easy to learn; is Open.",
+      "url"         : "http://python.org/"
+			},
+		{
+			"title"  			: "Koding.com",
+			"catId"  			: "3",
+			"persist"     : false,
+			"description" : "Koding gives you the necessary environment to start developing your apps, run them, collaborate and share with the world.",
+      "url"         : "https://koding.com/"
+			},
+		{
+			"title"  			: "Native Framer Support in Sketch",
+			"catId"  			: "1",
+			"persist"     : false,
+			"description" : "Starting from Sketch 3.0.4 there's a native Framer support in Sketch. It is much faster (5-10x), and has been very stable in our initial tests, solving all of the crashes we had before. ",
+      "url"         : "https://www.facebook.com/groups/framerjs/permalink/529365040523905/"
+			},
+		{
+			"title"  			: "Welcome to Swift Blog",
+			"catId"  			: "2",
+			"persist"     : false,
+			"description" : "This new blog will bring you a behind-the-scenes look into the design of the Swift language by the engineers who created it, in addition to the latest news and hints to turn you into a productive Swift programmer.",
+      "url"         : "https://developer.apple.com/swift/blog/"
+			},
+		{
+			"title"  			: "Amazon Cognito",
+			"catId"  			: "1",
+			"persist"     : false,
+			"description" : "Amazon Cognito is a simple user identity and data synchronization service that helps you securely manage and synchronize app data for your users across their mobile devices. You can create unique identities for your users through a number of public login providers (Amazon, Facebook, and Google) and also support unauthenticated guests. You can save app data locally on users’ devices allowing your applications to work even when the devices are offline. With Amazon Cognito, you can save any kind of data in the AWS Cloud, such as app preferences or game state, without writing any backend code or managing any infrastructure. This means you can focus on creating great app experiences instead of having to worry about building and managing a backend solution to handle identity management, network state, storage, and sync.",
+      "url"         : "https://aws.amazon.com/cognito/"
+			}
+	]
+}

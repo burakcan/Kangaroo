@@ -34,12 +34,18 @@
         var items   = this.where({ catId : catId.toString() });
         items.map(function(item){
           item.set('catId', '0');
-          item.save();
+
+          if (item.get('persist')){
+            item.save();
+          }
         });
       }, this);
 
       Dispatcher.subscribe('items:save', function(topic, data){
         var item;
+
+        data.persist = (data.persist === null || data.persist === undefined) ? true : data.persist;
+
         if(data.cid){
           item = this.get(data.cid);
           delete data['cid'];
@@ -51,7 +57,9 @@
         }
 
         if (options.localStorage){
-          item.save();
+          if (data.persist) {
+            item.save();
+          };
 
           data.cid = item.cid;
           searchIndex.add(data);
@@ -61,8 +69,8 @@
 
       }, this);
 
-      Dispatcher.subscribe('items:delete', function(topic, id){
-        var item = this.get(id);
+      Dispatcher.subscribe('items:delete', function(topic, cid){
+        var item = this.get(cid);
         if(item){ item.destroy(); }
       }, this);
 

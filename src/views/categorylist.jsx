@@ -16,10 +16,19 @@
 
       return (
         <nav className="category-list">
+          <h3>Categories</h3>
           <ul>
-            <li><a href="#" className="category-item">All Bookmarks</a></li>
+            <li className={(this.props.catId == 0) ? 'active' : '' }>
+              <a href="#" className="category-item">All Bookmarks</a>
+            </li>
+
             {categories}
-            <button className='new-category' onClick={this.showNewCategoryForm}>New category</button>
+
+            <button
+              className='new-category'
+              onClick={this.showNewCategoryForm}>
+              <i className='icon-plus-circled' /> New category
+            </button>
           </ul>
         </nav>
       )

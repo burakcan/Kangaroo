@@ -1,56 +1,109 @@
-main > .content-area {
-	position: fixed;
-	height: calc(100% - 60px);
-	width: calc(100% - 40px);
-	top: 60px;
-	left: 220px;
-	z-index: 10;
-	background: #fff;
-	overflow: scroll;
-	padding: 0 10px 10px 0;
-	box-sizing: border-box;
-	-webkit-transition: -webkit-transform .3s ease;
-	-webkit-transform: translateX(-180px);
+body {
+  font-size: 14px;
 }
 
-main > aside:hover ~ .content-area {
-	-webkit-transform: translateX(0px);
+main > .content-area {
+  position: fixed;
+  top: 60px;
+  left: 260px;
+  border-bottom: 1px solid #E3E3E3;
+  padding: 10px 0;
+  box-sizing: border-box;
+  position: relative;
+  overflow: scroll;
+  width: calc(100% - 260px);
+  height: calc(100% - 60px);
+}
+
+main > .content-area .errmsg {
+  padding: 10px;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  background: #F2F2F2;
+  position: absolute;
+  box-sizing: border-box;
 }
 
 main > .content-area article {
-	width: 25%;
-	background: transparent;
-	float: left;
-	box-sizing: border-box;
-	padding: 10px 0 0 10px;
+  width: calc( (100% - 40px)/3 );
+  margin: 0 0 10px 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  float: left;
+  border: 1px solid #f7f7f7;
 }
 
-main > .content-area article > div {
-	background: #fcfcfc;
-	border-radius: 3px;
-	height: calc(120vw / 4);
-	position: relative;
+main > .content-area .item-enter
+ {
+  -webkit-transition: -webkit-transform 0.5s ease,
+                      opacity 0.5s ease;
+  -webkit-transform: translateY(50px);
+  opacity: 0;
 }
 
-main > .content-area article figure {
-	height: calc((120vw / 4)/2);
-	background: #F0ECF4
+main > .content-area .item-enter-active {
+  -webkit-transform: translateY(0px);
+  opacity: 1;
 }
 
-main > .content-area article .title {
-	display: block;
-	margin: 0;
-	font-size: 18px;
-	font-weight: 200;
-	padding: 20px;
-	text-decoration: none;
-	color: #444;
+main > .content-area .item-leave {
+  -webkit-transition: opacity 1ms ease; /* Because ReactCSSTransition not working correct */
+}
+
+main > .content-area .item-leave-active {
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+}
+
+main > .content-area article h2 {
+  display: block;
+  margin: 0 0 10px;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.99;
+}
+
+main > .content-area article h2 a {
+  text-decoration: none;
+  color: #646871;
+  font-weight: 300;
+  font-size: 22px;
 }
 
 main > .content-area article p {
-	display: block;
-	color: #444;
-	padding: 0 20px;
-	font-size: 14px;
-	margin: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.99;
+}
+
+main > .content-area article footer {
+  margin: 10px -10px -10px -10px;
+  background: #f7f7f7;
+  padding: 10px;
+  height: 22px;
+}
+
+main > .content-area article footer button {
+  display: block;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #646871;
+  float: right;
+  opacity: 0.5;
+  margin-left: 2px;
+  -webkit-transition: opacity 0.3s ease;
+}
+main > .content-area article footer button:hover {
+  opacity: 1;
 }

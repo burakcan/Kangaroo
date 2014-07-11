@@ -43,13 +43,13 @@
       var confirmButton;
 
       if(this.props.itemData){
-        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'>Save item</button>;
+        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'><i className='icon-ok-circled'/>Save item</button>;
       } else {
-        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'>Add item</button>;
+        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'><i className='icon-plus-circled'/>Add item</button>;
       }
 
       return (
-        <ModalView type='item-form' title={this.props.title}>
+        <ModalView type='item-form' cancelHandler={this.cancel} title={this.props.title}>
           <input
             type         = 'text'
             ref          = 'itemTitle'

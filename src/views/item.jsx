@@ -11,15 +11,15 @@
         			{this.props.itemData.get('description')}
         		</p>
             <footer>
-              <button className='edit' onClick={this.showEditForm}>Edit</button>
-              <button className='delete' onClick={this.delete}>Delete</button>
+              <button className='delete' onClick={this.delete}><i className='icon-cancel'/></button>
+              <button className='edit' onClick={this.showEditForm}><i className='icon-pencil'/></button>
             </footer>
         </article>
       )
     },
     delete : function(e){
       e.preventDefault();
-      Dispatcher.dispatch('items:delete', this.props.itemData.id);
+      Dispatcher.dispatch('items:delete', this.props.itemData.cid);
     },
     showEditForm : function(e){
       e.preventDefault();

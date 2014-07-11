@@ -7,8 +7,11 @@
 		render : function(){
 			return (
 				<header>
-					<input type="text" className="search-input" onKeyUp={this.handleSearch} placeholder="Search..." ref="search" />
-					<button onClick={this.showNewItemForm} className='add'>Add new bookmark</button>
+					<button onClick={this.showNewItemForm} className='add'>
+						<i className='icon-plus'/> Add new bookmark
+					</button>
+					<label htmlFor='searchinput' className='icon-search' />
+					<input type="text" name='searchinput' className="search-input" onKeyUp={this.handleSearch} placeholder="Search..." ref="search" />
 				</header>
 			)
 		},

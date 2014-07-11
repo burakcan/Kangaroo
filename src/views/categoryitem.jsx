@@ -8,10 +8,10 @@
         var className = 'category-item ' + this.props.className;
       }
       return (
-        <li>
-          <a href={href} className={className}>{this.props.categoryData.get('catName')}</a>
-          <button className='edit' onClick={this.showEditForm}>Edit</button>
-          <button className='delete' onClick={this.delete}>Delete</button>
+        <li className={className}>
+          <a href={href}><span>{this.props.categoryData.get('catName')}</span></a>
+          <button className='edit' onClick={this.showEditForm}><i className='icon-pencil-circled'/></button>
+          <button className='delete' onClick={this.delete}><i className='icon-cancel-circled'/></button>
         </li>
       )
     },

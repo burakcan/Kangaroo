@@ -28,6 +28,9 @@
 
       Dispatcher.subscribe('categories:save', function(topic, data){
         var category;
+
+        data.persist = (data.persist === null || data.persist === undefined) ? true : data.persist;
+
         if(data.cid){
           category = this.get(data.cid);
           delete data['cid'];
@@ -50,7 +53,9 @@
           category = new CategoryModel(data);
           this.add(category);
         }
-        category.save();
+        if (data.persist) {
+            category.save();
+          };
       }, this);
     },
     model : CategoryModel,

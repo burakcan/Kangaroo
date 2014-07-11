@@ -27,13 +27,13 @@
       var confirmButton;
 
       if(this.props.categoryData){
-        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'>Save category</button>;
+        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'><i className='icon-ok-circled'/>Save category</button>;
       } else {
-        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'>Add category</button>;
+        confirmButton = <button type='submit' onClick={this.confirm} className='confirm'><i className='icon-plus-circled'/>Add category</button>;
       }
 
       return (
-        <ModalView type='category-form' title={this.props.title}>
+        <ModalView cancelHandler={this.cancel} type='category-form' title={this.props.title}>
             <input
               type         = 'text'
               ref          = 'catName'
